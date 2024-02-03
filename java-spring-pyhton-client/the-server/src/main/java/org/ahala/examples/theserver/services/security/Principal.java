@@ -1,8 +1,8 @@
 package org.ahala.examples.theserver.services.security;
 
-import com.noty.web.entities.User;
 import lombok.Builder;
 import lombok.Getter;
+import org.ahala.examples.theserver.entities.AppUser;
 
 import java.util.Map;
 
@@ -11,6 +11,6 @@ import java.util.Map;
 public class Principal {
 
     Map<String, String> claims;
-    private User user;
+    private AppUser user;
 
 }

@@ -1,7 +1,7 @@
 package org.ahala.examples.theserver.services.security;
 
-import com.noty.web.framework.model.Validatable;
 import lombok.Data;
+import org.ahala.examples.theserver.framework.model.Validatable;
 import org.springframework.util.StringUtils;
 
 @Data

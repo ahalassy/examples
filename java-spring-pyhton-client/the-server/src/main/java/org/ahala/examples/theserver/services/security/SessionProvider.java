@@ -1,7 +1,6 @@
 package org.ahala.examples.theserver.services.security;
 
-import com.noty.web.NotyAuthorizationException;
-import com.noty.web.services.security.Credentials;
+import org.ahala.examples.theserver.AppException;
 
 public interface SessionProvider {
 
@@ -11,7 +10,7 @@ public interface SessionProvider {
      * the permissions.
      * @param credentials The credentials used to find and authenticate the user.
      * @return Returns the authentication principal object.
-     * @throws NotyAuthorizationException When the authentication could not be done for some reason.
+     * @throws AppException When the authentication could not be done for some reason.
      */
-    Principal authenticate(Credentials credentials) throws NotyAuthorizationException;
+    Principal authenticate(Credentials credentials) throws AppException;
 }

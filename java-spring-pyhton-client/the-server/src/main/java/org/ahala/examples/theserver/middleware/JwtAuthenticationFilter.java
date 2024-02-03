@@ -1,9 +1,9 @@
 package org.ahala.examples.theserver.middleware;
 
-import com.noty.web.components.JwtUtil;
 import io.jsonwebtoken.Claims;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.AllArgsConstructor;
+import org.ahala.examples.theserver.components.JwtUtil;
 import org.springframework.util.StringUtils;
 
 import java.util.regex.Pattern;

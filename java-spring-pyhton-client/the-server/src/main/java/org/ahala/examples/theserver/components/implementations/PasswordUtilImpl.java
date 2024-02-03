@@ -1,6 +1,6 @@
 package org.ahala.examples.theserver.components.implementations;
 
-import com.noty.web.components.PasswordUtil;
+import org.ahala.examples.theserver.components.PasswordUtil;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;

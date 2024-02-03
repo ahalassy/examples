@@ -1,11 +1,11 @@
 package org.ahala.examples.theserver.components;
 
 
-import com.noty.web.entities.User;
-import com.noty.web.services.Principal;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
+import org.ahala.examples.theserver.entities.AppUser;
+import org.ahala.examples.theserver.services.security.Principal;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -49,7 +49,7 @@ public class JwtUtil {
         Date expires = new Date(now.getTime() + TOKEN_TTL);
         Key secretKey = new SecretKeySpec(secretAsKey(), "HmacSHA512");
         Map<String, String> claims = principal.getClaims();
-        User user = principal.getUser();
+        AppUser user = principal.getUser();
 
         claims.put("serial", UUID.randomUUID().toString());
 
