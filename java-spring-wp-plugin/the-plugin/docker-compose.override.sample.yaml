@@ -1,0 +1,15 @@
+services:
+  web-server:
+    volumes:
+      - /r/repo/github.examples/.work/web/:/var/www/html/
+      - /r/repo/github.examples/java-spring-wp-plugin/the-plugin/plugin-src/:/var/www/html/wp-content/plugins/wp-spring
+    ports:
+      - "8088:80"
+  mysql-server:
+    volumes:
+      - /r/repo/github.examples/.work/db/:/var/lib/mysql/
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_USER: wpuser
+      MYSQL_PASSWORD: wpsecret
