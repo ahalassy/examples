@@ -9,4 +9,7 @@ Author https://github.com/ahalassy
 License: MIT
 */
 
+define('__PDIR__', __DIR__);
+
+require_once(__DIR__.'/block/_init.php');
 require_once(__DIR__.'/admin/_init.php');

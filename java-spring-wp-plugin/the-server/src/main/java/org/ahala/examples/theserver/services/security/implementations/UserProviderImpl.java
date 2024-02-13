@@ -16,6 +16,8 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class UserProviderImpl implements UserProvider {
 
+    public static final int API_KEY_RAW_LENGTH = 22;
+
     private final DateTime dateTime;
 
     private final PasswordUtil passwordUtil;
@@ -73,7 +75,7 @@ public class UserProviderImpl implements UserProvider {
 
     @Override
     public ApiKeyPrincipal createApiKey(Principal principal) throws AppException {
-        String key = RandomUtil.generateString(22);
+        String key = RandomUtil.generateString(API_KEY_RAW_LENGTH);
 
         ApiKey apiKey = ApiKey.builder()
                 .createdAt(dateTime.now())

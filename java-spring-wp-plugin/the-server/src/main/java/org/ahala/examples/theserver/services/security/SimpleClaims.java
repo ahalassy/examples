@@ -7,10 +7,6 @@ import java.util.*;
 
 public class SimpleClaims extends HashMap<String, Object> implements Claims {
 
-    public SimpleClaims() {
-
-    }
-
     public SimpleClaims(Map<String, String> source) {
         super(source);
     }

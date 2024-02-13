@@ -26,6 +26,9 @@ public class ApiKeyAuthenticationFilter extends AuthenticationFilterBase {
     protected Claims fetchClaims(HttpServletRequest request) {
         try {
             ApiKeyPrincipal apiKeyPrincipal = fetchPrincipal(request);
+            if (apiKeyPrincipal == null)
+                return null;
+
             Principal principal = sessionProvider.verifyApiKey(apiKeyPrincipal);
             return new SimpleClaims(principal.getClaims());
 
