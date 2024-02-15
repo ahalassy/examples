@@ -1,0 +1,11 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"title": "REST Client Box",
+	"name": "wp-spring/example-block",
+	"category": "wp-spring",
+	"icon": "universal-access-alt",
+	"textdomain": "wp-spring",
+	"example": {},
+	"editorScript": "file:./block.js"
+}

@@ -24,4 +24,22 @@ class ExampleService
     {
         return get_option(WPEP_OPTION_URL);
     }
+
+    function get_key_config()
+    {
+        return get_option(WPEP_OPTION_KEY);
+    }
+
+    function get_me() {
+        $key = get_option(WPEP_OPTION_KEY);
+        $url = get_option(WPEP_OPTION_URL);
+
+        $response = wp_remote_get( $url . '/api/user', array(
+            'headers' => [
+                'x-api-key' => $key
+            ]
+        ));
+
+        return json_decode($response['body']);
+    }
 }
