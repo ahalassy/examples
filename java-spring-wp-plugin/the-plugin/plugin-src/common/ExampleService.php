@@ -30,16 +30,19 @@ class ExampleService
         return get_option(WPEP_OPTION_KEY);
     }
 
-    function get_me() {
+    function get_events() {
         $key = get_option(WPEP_OPTION_KEY);
         $url = get_option(WPEP_OPTION_URL);
 
-        $response = wp_remote_get( $url . '/api/user', array(
+        $response = wp_remote_get( $url . '/api/event', array(
             'headers' => [
                 'x-api-key' => $key
             ]
         ));
-
-        return json_decode($response['body']);
+        $status_code = $response['response']['code'];
+		$success = 200 <= $status_code && $status_code < 300;
+        return $success
+            ? json_decode($response['body'])
+            : false;
     }
 }

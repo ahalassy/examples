@@ -1,0 +1,10 @@
+.wp-spring > h4 {
+    display: block;
+    border-bottom: 1px solid #dfdfdf;
+    margin-bottom: 4px;
+}
+
+.wp-spring > p {
+    margin-top: 4px;
+    margin-bottom: 3em;
+}

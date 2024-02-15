@@ -7,5 +7,6 @@
 	"icon": "universal-access-alt",
 	"textdomain": "wp-spring",
 	"example": {},
-	"editorScript": "file:./block.js"
+	"editorScript": "file:./block.js",
+	"style": "file:./block.css"
 }

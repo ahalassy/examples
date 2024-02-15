@@ -21,7 +21,7 @@ public class UserApiController {
     private final CreateApiKeyCommandFactory createApiKeyCommandFactory;
 
     @PostMapping()
-    public UserResponse createUser(@ModelAttribute Credentials credentials) throws AppException {
+        public UserResponse createUser(@ModelAttribute Credentials credentials) throws AppException {
         Impersonation impersonation = userProvider.createUser(credentials);
         return UserResponse.fromImpersonation(impersonation);
 
